@@ -5,7 +5,7 @@ const board = document.getElementById('game-board');
 const gridSize = 20;
 let snake = [{x: 10, y: 10}];
 let food = generateFood();
-let direction = 'right';
+let direction = 'down';
 
 // Draw game map, snake, food
 function draw() {
