@@ -7,6 +7,7 @@ let snake = [{x: 10, y: 10}];
 let food = generateFood();
 let direction = 'right';
 let gameInterval;
+let gameSpeedDelay = 200;
 
 // Draw game map, snake, food
 function draw() {
@@ -79,9 +80,13 @@ function move() {
   if (head.x === food.x && head.y === food.y){
     food = generateFood();
     clearInterval(); //Clear past interval
-    gameInterval = 
-  }
-  
+    gameInterval = setInterval(() => {
+      move();
+      draw();
+    }, gameSpeedDelay);
+  } else {
+    snake.pop();
+  }  
 }
 
 // Test moving
