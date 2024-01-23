@@ -95,3 +95,9 @@ function move() {
 //   draw(); // then draw again new position
 // }, 200)
 
+
+// Start game function
+
+function startGame() {
+  
+}
